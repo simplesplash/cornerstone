@@ -16,6 +16,119 @@
     background-color: $footer-background;
     border-top: container("border");
     padding: spacing("double") 0;
+    &.AF {
+        &.footer-wrapper {
+            padding: 0;
+            .container {
+                padding: 0;
+                .footer-info {
+                    padding: 3.3rem 1.5rem;
+                    .footer-info-col {
+                        border-right: 2px solid #415875;
+                        min-height: 150px;
+                        margin-bottom: 0;
+                        
+                        &:last-child {
+                            border-right: none;
+                        }
+                        
+                        .button {
+                            height: 3rem;
+                            width: 100%;
+                            margin-top: 15px;
+                            padding: 15px;
+                        }
+                    }
+                    
+                    &.bottom {
+                        background-color: #1b3a5a;
+                        padding: 0;
+                        margin: 0;
+                        .footer-info-col {
+                            min-height: 0;
+                            width: 30%;
+                            border-right: none !important;
+                            padding-bottom: 10px;
+                            
+                            &:first-child {
+                                width: 36%;
+                                
+                                .footer-logo {
+                                    position: relative;
+                                    top: -15px;
+                                }
+                            }
+                            &.about-col {
+                                width: 34%;
+                                font-size: 14px;
+                                padding-top: 15px;
+                            }
+                            &.payment-info-col {
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                            }
+                            
+                            .social-links-wrapper {
+                                .socialLinks {
+                                    .socialLinks-item {
+                                        font-family: "BebasNeueRegular";
+                                        font-size: 20px;
+                                        
+                                        a {
+                                            color: #f9ff4c;    
+                                        }
+                                        
+                                        &.visit-us-content {
+                                            color: #fffefe;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-info-heading {
+                color: #fff;
+                font-family: "BebasNeueRegular";
+                font-size: 21px;
+                color: #fffefe;
+            }
+            .footer-info-list {
+                a {
+                    font-size: 13px;
+                    color: #fffefe;
+                }
+            }
+            .footer-info-col {
+                color: #fffefe;
+                font-size: 12px;
+            }
+            .custom-form-wrapper {
+                .button {
+                     margin-left: 0;     
+                }
+                .form-input {
+                    margin-bottom: 10px;
+                    @media screen and (max-width : 550px){
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }    
+    }
+}
+
+@media (max-width: 690px) {
+    .footer {
+        clear: both;
+    }
+}
+@media (max-width: 551px) {
+    .footer-info-col {
+        width: 100% !important;
+        border-right: none !important;
+    }
 }
 
 .footer-info {

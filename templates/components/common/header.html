@@ -5,12 +5,18 @@
     </div>
 </div>
 {{/if}}
-<header class="header" role="banner">
+<header class="header AF header-main-wrapper" role="banner">
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
     {{> components/common/navigation}}
 
+    <div class="header-left">
+        <a href="/ship-fireworks">
+            <img src="//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/yes_work.gif" alt="Yes">
+        </a>
+    </div>
+        
     {{#if page_type '===' 'default'}}
         <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
             {{> components/common/store-logo}}
@@ -20,8 +26,16 @@
             {{> components/common/store-logo}}
         </div>
     {{/if}}
+    
+    <div class="header-right">
+        <div class="header_right_bot">
+            <div class="call_number">CALL US <span>330-650-1776</span></div>
+        </div>
+    </div>
+    
     {{{region name="header_bottom"}}}
-    <div class="navPages-container" id="menu" data-menu>
+    <div class="navPages-container custom-header-menu" id="menu" data-menu>
         {{> components/common/navigation-menu}}
     </div>
+
 </header>

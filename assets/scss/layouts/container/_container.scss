@@ -2,6 +2,10 @@
 // GRID (CSS)
 // =============================================================================
 
+//@font-face {
+//  font-family: 'BebasNeueRegular';
+//  src: url('http://americanfireworks7.mybigcommerce.com/content/fonts/BebasNeue-Regular.ttf') format('truetype');
+//}
 
 .container {
     margin-left: auto;
@@ -13,5 +17,88 @@
 
     @include breakpoint("large") {
         padding: 0 ($container-padding * 4);
+    }
+}
+
+.header-custom-container-outer {
+    width: 100%;
+    height: auto;
+    background-color: #000;
+            
+    .header-custom-container-inner {
+        max-width: 975px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+.custom-container-outer {
+    width: 100%;
+    height: auto;
+    float: left;
+    background-image: url("//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/container_bg.png?t=15238579874");
+    
+    .custom-container-wrapper {
+        max-width: 1020px;
+        height: auto;
+        background-image: url("//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/container_bg.png?t=15238579874");
+        margin: 0 auto;
+        
+        .custom-container-white-bg {
+            width: 1019px;
+            height: auto;
+            float: left;
+            background-image: url("//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/container_white_bg.png?t=15238579874");
+            
+            .custom-container-inner {
+                max-width: 975px;
+                height: auto;
+                margin: 0 auto;
+                clear: both;
+                
+                .custom-body {
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+.fireworks_wrapper {
+    margin: 0 auto;
+    background-color: black;
+    height: 341px;
+    
+    .fireworks_div {
+        background-image: url("//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/fires_left_and_right_img.png?t=15238579874");
+        height: 450px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width : 1034px){
+    .custom-container-outer {
+        width: 100%;
+        
+        .custom-container-wrapper {
+            width: 100%;
+            
+            .custom-container-white-bg {
+                width: 100%;
+                
+                .custom-container-inner {
+                    width: 100%;
+                    background: #fff;
+                }
+            }
+        }
+    }
+    
+    .fireworks_wrapper {
+        display: none;
+        .fireworks_div {
+            display: none;
+        }
     }
 }

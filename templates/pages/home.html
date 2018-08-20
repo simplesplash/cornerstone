@@ -16,6 +16,27 @@ blog:
         {{> components/carousel}}
     {{/if}}
     {{{snippet 'home_content'}}}
+
+    <div class="home-three-box-wrapper">
+        <div class="professional-display side-item">
+            <a href="/professional-firework-displays/request-display-quote">
+                <div class="prfsnal_dsply main-title">PROFESSIONAL DISPLAYS</div>
+                <div class="request sub-title">REQUEST A QUOTE</div>
+            </a>
+        </div>
+        <div class="current-specials middle-item">
+            <a href="/coupon">
+                <div class="crnt_special main-title">CURRENT RETAIL SPECIALS</div>
+                <div class="buy_one sub-title">CLICK HERE</div>
+            </a>
+        </div>
+        <div class="buy-fireworks-online side-item">
+            <a href="/professional-firework-displays/become-pyrotechnician">
+                <div class="buy_firwrks_online main-title">BECOME A PYROTECHNICIAN</div>
+                <div class="our_online_store sub-title">CLICK HERE</div>
+            </a>
+        </div>
+    </div>
 {{/partial}}
 
 {{#partial "page"}}
@@ -23,6 +44,102 @@ blog:
     {{#each shipping_messages}}
         {{> components/common/alert-info message}}
     {{/each}}
+
+    <div class="custom-home">
+        <div class="We-bring-the-night">
+            “We bring the nighttime skies to life for all occasions”
+        </div>
+        <!--news_and_products_div start here -->
+        <div class="news_and_products_div">
+            <!--news_events start here-->
+            <div class="news_events">
+                <div class="news_events_head_line">
+                    <div class="news_event_icon"></div>
+                    <div class="event_name">NEWS &amp; EVENTS</div>
+                    <div class="view_all"><a href="#">view all</a></div>
+                </div>
+
+                <div class="news_events_details">
+                    <div class="news_events_title">
+                        <a href="/addicted-to-loud">
+                            Addicted to Loud
+                        </a>
+                    </div>
+                    <div class="news_events_discription">
+                        <!--<p>Our 2018 Demo is set for April 28th! The demo will begin at dusk and the store will be open at 1 pm and stay open until everyone is gone. Click for more information!</p>-->
+                        <p>
+                            <iframe src="https://www.youtube.com/embed/GMUDwLuGoNs" style="display: block; margin-left: auto; margin-right: auto;" width="100%" height="100%" frameborder="0"></iframe>
+                        </p>
+                    </div>
+                    <!--<div class="posted_date_and_reade_more">
+
+                        <div class="posted_date">Posted Mar 11, 2016</div>
+
+                        <div class="read_more">
+                            <a href="/addicted-to-loud">
+                                <img src="https://americanfireworks.com/skin/frontend/default/jewelry-moon/images/read_more.png" alt="" width="90" height="26">
+                            </a>
+                        </div>
+                    </div>-->
+
+                </div>
+            </div>
+            <!--news_events end here-->
+            <!--hot_new_products start here-->
+            <div class="hot_new_products">
+                <div class="hot_new_products_heade_line">
+                    <div class="hot_new_products_icon"></div>
+                    <div class="hot_new_products_name">HOT NEW PRODUCTS</div>
+                    <div class="view_all">
+                        <a href="/online-retail-store/new-arrivals/">view all</a>
+                    </div>
+                </div>
+                <div class="hot_new_products_details">
+                    <div class="product_item_div">
+                        <a href="/tommy-gun-assorted-roman-candles-cutting-edge/">
+                            <img src="https://cdn8.bigcommerce.com/s-ue35mlfnwh/images/stencil/500x659/products/713/971/tommy_gun__11630.1512104616.png?c=2&amp;imbypass=on" alt="">
+                        </a>
+                    </div>
+                    <div class="product_item_details">
+                        <div class="product_item_title">
+                            <a href="/tommy-gun-assorted-roman-candles-cutting-edge">Tommy Gun Assorted Roman</a>
+                        </div>
+                        <div class="product_item_discription">
+                            Tommy Gun Assorted Roman Candles are some of the strongest and most powerful on the market! </div>
+                        <div class="product_item_view_div">
+                            <a href="/tommy-gun-assorted-roman-candles-cutting-edge/">
+                                <img src="//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/view_item.png" alt="" width="90" height="26"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hot_new_products_details">
+                    <div class="product_item_div">
+                        <a href="/making-fire-cutting-edge/">
+                            <img src="http://cdn8.bigcommerce.com/s-ue35mlfnwh/images/stencil/1280x1280/products/182/841/making_fire__00150.1512104601.jpg?c=2&imbypass=on" alt="">
+                        </a>
+                    </div>
+                    <div class="product_item_details">
+                        <div class="product_item_title">
+                            <a href="/making-fire-cutting-edge/">
+                                Making Fire - Cutting Edge
+                            </a>
+                        </div>
+                        <div class="product_item_discription">
+                            Making Fire Triple Break shells are some of the nicest on the market. 6 Per Pack.
+                        </div>
+                        <div class="product_item_view_div">
+                            <a href="/making-fire-cutting-edge/">
+                                <img src="//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/view_item.png" alt=""
+                                     width="90" height="26">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--hot_new_products end here-->
+        </div>
+        <!--end news_and_products_div here-->
+    </div>
 
 <div class="main full">
     {{#if products.featured}}
@@ -34,7 +151,9 @@ blog:
     {{/if}}
 
     {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+        <div class="custom-product-banner" >
+            {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+        </div>
     {{/if}}
 </div>
 {{/partial}}

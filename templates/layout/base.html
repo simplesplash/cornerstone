@@ -15,6 +15,13 @@
             document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
         </script>
 
+        <style type="text/css">
+            @font-face {
+                font-family: "BebasNeueRegular";
+                src: url("//cdn8.bigcommerce.com/s-ue35mlfnwh/content/fonts/BebasNeue-Regular.ttf?t=1523856350")
+            }
+        </style>
+
         {{ getFontsCollection }}
         {{{stylesheet '/assets/css/theme.css'}}}
 
@@ -27,7 +34,7 @@
         {{inject 'urls' urls}}
         {{{snippet 'htmlhead'}}}
     </head>
-    <body>
+    <body id="{{ hyphenate (toLowerCase page.title) }}">
         {{{snippet 'header'}}}
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
@@ -35,9 +42,26 @@
             {{> components/common/cookie}}
         {{/if}}
 
-        {{> components/common/header }}
-        {{> components/common/body }}
-        {{> components/common/footer }}
+        <div class="header-custom-container-outer">
+            <div class="header-custom-container-inner">
+                {{> components/common/header }}
+            </div>
+        </div>
+
+        <div class="fireworks_wrapper" style="clear:left;">
+            <div class="fireworks_div" style="float:none;"></div>
+        </div>
+
+        <div class="custom-container-outer">
+            <div class="custom-container-wrapper">
+                <div class="custom-container-white-bg">
+                    <div class="custom-container-inner">
+                        {{> components/common/body }}
+                        {{> components/common/footer }}
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>

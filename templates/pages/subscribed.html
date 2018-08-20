@@ -1,6 +1,10 @@
 {{#partial "page"}}
 
 <section class="page">
+    <aside class="page-sidebar" id="faceted-search-container">
+        {{> components/category/sidebar}}
+    </aside>
+
     <div class="page-content page-content--centered">
         <h1 class="page-heading">
             {{#if subscription.error}}

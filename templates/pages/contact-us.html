@@ -1,27 +1,32 @@
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
 <main class="page">
+    <aside class="page-sidebar" id="faceted-search-container">
+        {{> components/category/sidebar}}
+    </aside>
 
-    <h1 class="page-heading">{{page.title}}</h1>
+    <div class="page-content page-content-contact-us">
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-    {{#if page.sub_pages}}
-        <nav class="navBar navBar--sub">
-            <ul class="navBar-section account-navigation">
-                {{#each page.sub_pages}}
-                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
-                {{/each}}
-            </ul>
-        </nav>
-    {{/if}}
+        <h1 class="page-heading">{{page.title}}</h1>
 
-    <div class="page-content page-content--centered">
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
         {{#if forms.contact.success}}
             {{{lang 'forms.contact_us.successful' shopPath=urls.home}}}
         {{else}}
-            <p>{{{page.content}}}</p>
-            {{> components/page/contact-us-form}}
+            <div>{{{page.content}}}</div>
+            <div class="contact-form-wrapper">
+                {{> components/page/contact-us-form}}
+            </div>
         {{/if}}
 
     </div>

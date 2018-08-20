@@ -1,22 +1,25 @@
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
 <main class="page">
+    <aside class="page-sidebar" id="faceted-search-container">
+        {{> components/category/sidebar}}
+    </aside>
 
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <div class="page-content">
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-    {{#if page.sub_pages}}
-    <nav class="navBar navBar--sub">
-        <ul class="navBar-section account-navigation">
-        {{#each page.sub_pages}}
-            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
-        {{/each}}
-        </ul>
-    </nav>
-    {{/if}}
+        <h1 class="page-heading">{{ page.title }}</h1>
 
-    <div class="page-content page-content--centered">
+        <!--{{#if page.sub_pages}}
+            <nav class="navBar navBar&#45;&#45;sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}-->
+
         {{#replace '%%Syndicate%%' page.content}}
             {{> components/page/rss_feed}}
         {{else}}

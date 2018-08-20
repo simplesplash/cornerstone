@@ -1,5 +1,5 @@
 {{#partial "page"}}
-<div class="page">
+<div class="page custom-cart">
 
     <main class="page-content" data-cart>
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
@@ -15,6 +15,10 @@
 
             <div data-cart-content>
                 {{> components/cart/content}}
+
+                <div class="cart-notice-must-18">
+                    <h5>Must be 18 or over to purchase</h5>
+                </div>
             </div>
 
             <div data-cart-totals>

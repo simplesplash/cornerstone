@@ -1,12 +1,12 @@
 {
-  "name": "Cornerstone",
-  "version": "2.3.2-rc.1",
+  "name": "American-Fireworks",
+  "version": "1.0",
   "meta": {
     "price": 0,
     "documentation_url": "https://support.bigcommerce.com/articles/Public/Cornerstone-Theme-Manual",
-    "author_name": "BigCommerce",
-    "author_email": "support@bigcommerce.com",
-    "author_support_url": "https://www.bigcommerce.com/support",
+    "author_name": "SimpleSplash",
+    "author_email": "info@SimpleSplash.com",
+    "author_support_url": "http://simplesplash.com/",
     "composed_image": "composed.png",
     "features": [
       "fully_responsive",
@@ -54,7 +54,7 @@
     "productpage_reviews_count": 9,
     "productpage_related_products_count": 10,
     "productpage_similar_by_views_count": 10,
-    "categorypage_products_per_page": 12,
+    "categorypage_products_per_page": 50,
     "shop_by_price_visibility": true,
     "brandpage_products_per_page": 12,
     "searchpage_products_per_page": 12,

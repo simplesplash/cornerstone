@@ -26,8 +26,9 @@
     }
 
     &.slick-initialized { // 2
-        max-height: remCalc(1000);
+        max-height: 354px; //remCalc(1000);
         opacity: 1;
+        margin-bottom: 0;
     }
 
     &:not(.slick-initialized) :not(.heroCarousel-slide--first).heroCarousel-slide {
@@ -36,6 +37,7 @@
 
     .slick-next,
     .slick-prev {
+        display: none !important;
         top: 50%;
     }
 
@@ -56,6 +58,7 @@
     }
 
     .slick-dots {
+        display: none !important;
         bottom: spacing("third");
 
         @include breakpoint("medium") {

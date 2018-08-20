@@ -71,3 +71,14 @@
         }
     }
 }
+
+@media (max-width: 800px) {
+    .productView-images {
+        margin-bottom: 10px;
+        .productView-image {
+            .productView-img-container {
+                width: 40%;
+            }
+        }
+    }
+}
