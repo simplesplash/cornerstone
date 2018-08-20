@@ -241,6 +241,14 @@
         {{{snippet 'product_details'}}}
     </section>
 
+    {{#if freight}}
+        <article class="productView-description product-view-fright-message-wrapper">
+            <div class="product-view-fright-message">
+                This item is only available via freight shipping and is prohibited from shipping to certain states due to federal law. View a list of states we cannot ship to by <a href="/ship-fireworks">Clicking Here.</a>
+            </div>
+        </article>
+    {{/if}}
+
     <article class="productView-description"{{#if schema}} itemprop="description"{{/if}}>
         {{#if theme_settings.show_product_details_tabs}}
             {{> components/products/description-tabs}}

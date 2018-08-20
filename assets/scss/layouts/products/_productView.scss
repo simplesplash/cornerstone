@@ -82,3 +82,28 @@
         }
     }
 }
+
+.product-view-fright-message-wrapper {
+    margin-bottom: 15px;
+
+    .product-view-fright-message {
+        border-color: #fcd344;
+        background-color: #fafaec;
+        background-image: url("//cdn8.bigcommerce.com/s-ue35mlfnwh/content/images/i_msg-note.gif");
+        color: #3d6611;
+        background-position: 10px 9px !important;
+        background-repeat: no-repeat !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        font-family: arial;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        min-height: 20px !important;
+        padding: 10px 8px 8px 32px !important;
+
+        a {
+            color: #981605;
+            text-decoration: underline;
+        }
+    }
+}
