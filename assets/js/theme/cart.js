@@ -6,6 +6,9 @@ import utils from '@bigcommerce/stencil-utils';
 import ShippingEstimator from './cart/shipping-estimator';
 import { defaultModal } from './global/modal';
 import swal from 'sweetalert2';
+import minorderClass from './global/minorderClass';
+
+let min = new minorderClass();
 
 export default class Cart extends PageManager {
     onReady() {
@@ -148,6 +151,8 @@ export default class Cart extends PageManager {
             this.$cartContent.html(response.content);
             this.$cartTotals.html(response.totals);
             this.$cartMessages.html(response.statusMessages);
+
+            min.minmumordercheck();
 
             $cartPageTitle.replaceWith(response.pageTitle);
             this.bindEvents();

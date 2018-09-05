@@ -33,8 +33,14 @@
         {{inject 'maintenanceMode' settings.maintenance}}
         {{inject 'urls' urls}}
         {{{snippet 'htmlhead'}}}
+        <style type="text/css">
+        body.type-cart .custom-cart a[href="/checkout.php"] .loadingOverlay,.previewCartCheckout a.button[href="/checkout.php"], a[href="/checkout.php"], .checkoutMultiple, .cart-additionalCheckoutButtons { display:none; }
+        /*body.type-cart .custom-cart a[href="/checkout.php"] { display:block !important; }*/
+        body.type-cart .CheckingCart a[href="/checkout.php"] .loadingOverlay{ display: block !important;}
+        body.type-cart .CheckingCart a[href="/checkout.php"] { border: none !important;}
+        </style>
     </head>
-    <body id="{{ hyphenate (toLowerCase page.title) }}">
+    <body id="{{ hyphenate (toLowerCase page.title) }}" class="type-{{page_type}}" data-mincarttotal="200.00">
         {{{snippet 'header'}}}
         <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
